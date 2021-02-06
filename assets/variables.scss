@@ -1,0 +1,125 @@
+/* Define standard variables and values for website */
+
+// Background-Color
+$bg-primary-color: #252e3b;
+$bg-secondary-color-first: #303e52;
+$bg-secondary-color-second: #252e3b;
+$bg-secondary-color-third: #293342;
+$bg-secondary-color-fourth: #283241;
+
+// Text-Color
+$text-primary-color: #f8a74a;
+$text-secondary-color: #fafafb;
+$text-tertiary-color: #fafafbe1;
+$btn-hover-opacity: 0 !default;
+
+/* Use the variables */
+.bg-color {
+  background-color: $bg-primary-color;
+}
+
+.bg-color-navbar {
+  background-image: linear-gradient(
+    to right,
+    $bg-secondary-color-second,
+    $bg-secondary-color-fourth,
+    $bg-secondary-color-third,
+    $bg-secondary-color-fourth,
+    $bg-secondary-color-second
+  );
+}
+
+.bg-color-section-1 {
+  background-image: radial-gradient(
+    $bg-secondary-color-first,
+    $bg-secondary-color-second
+  );
+}
+
+.text-primary-color {
+  color: $text-primary-color;
+}
+
+.text-secondary-color {
+  color: $text-secondary-color;
+}
+
+.v-btn-nav:hover:before,
+.v-btn1-navfocus:before {
+  background-color: transparent;
+}
+
+.v-btn-nav:hover {
+  border-width: 3px;
+  border-bottom-style: solid;
+  border-color: $text-primary-color;
+  transition: 0.28s;
+}
+
+/* Use the variables display breakpoints*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .contain {
+    padding: 0 10px;
+  }
+
+  .logo-img {
+    height: 9px;
+  }
+
+  .illustration {
+    height: 300px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .contain {
+    padding: 0 20px;
+  }
+
+  .logo-img {
+    height: 10px;
+  }
+
+  .illustration {
+    height: 350px;
+  }
+}
+
+/* Medium devices (landscape tablets, 960px and up) */
+@media only screen and (min-width: 960px) {
+  .contain {
+    padding: 0 50px;
+  }
+
+  .logo-img {
+    height: 12px;
+  }
+
+  .illustration {
+    height: 400px;
+  }
+}
+
+/* Large devices (laptops/desktops, 1264px and up) */
+@media only screen and (min-width: 1264px) {
+  .contain {
+    padding: 0 100px;
+  }
+
+  .illustration {
+    height: 450px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1904px and up) */
+@media only screen and (min-width: 1904px) {
+  .contain {
+    padding: 0 200px;
+  }
+
+  .illustration {
+    height: 500px;
+  }
+}
