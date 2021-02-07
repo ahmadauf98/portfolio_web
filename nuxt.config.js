@@ -44,9 +44,9 @@ export default {
     theme: {
       themes: {
         light: {
-          primary: '#e7ce0b',
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          primary: '#f8a74a',
+          accent: '#fafafb',
+          secondary: '#2a3443',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,

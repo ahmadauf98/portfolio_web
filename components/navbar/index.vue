@@ -8,7 +8,9 @@
     >
       <!-- Brand Logo -->
       <v-toolbar-title>
-        <img class="logo-img" src="~/static/img/logo.svg" alt="..." />
+        <nuxt-link to="#home">
+          <img class="logo-img" src="~/static/img/logo.svg" alt="..." />
+        </nuxt-link>
       </v-toolbar-title>
 
       <!-- Navigation Button -->
@@ -21,6 +23,7 @@
         class="v-btn-nav text-subtitle-1 text-capitalize font-weight-regular pa-0 mx-3 d-none d-sm-flex"
         tile
         text
+        :to="`#${nav.link}`"
       >
         <span class="text-secondary-color white--text">{{ nav.name }}</span>
       </v-btn>
@@ -46,6 +49,7 @@
           class="d-block pa-0"
           v-for="(nav, index) in navigations"
           :key="index"
+          @click="nav.link"
           link
         >
           <v-list-item-content class="px-5">
@@ -58,36 +62,24 @@
       </v-list>
 
       <template v-slot:append>
-        <div class="pa-2 mb-2 text-center">
-          <v-btn icon>
-            <v-icon color="primary">mdi-facebook</v-icon>
-          </v-btn>
-
-          <v-btn icon>
-            <v-icon color="primary">mdi-github</v-icon>
-          </v-btn>
-
-          <v-btn icon>
-            <v-icon color="primary">mdi-linkedin</v-icon>
-          </v-btn>
-
-          <v-btn icon>
-            <v-icon color="primary">mdi-instagram</v-icon>
-          </v-btn>
-        </div>
+        <Social />
       </template>
     </v-navigation-drawer>
   </div>
 </template>
 
 <script>
+import social from '../social'
 export default {
+  components: {
+    Social: social,
+  },
+
   data() {
     return {
       drawer: false,
       navigations: [
-        { link: '', name: 'Profile' },
-        { link: '', name: 'Education' },
+        { link: 'education', name: 'Education' },
         { link: '', name: 'Skills' },
         { link: '', name: 'Project' },
         { link: '', name: 'Contact' },

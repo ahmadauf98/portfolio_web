@@ -6,6 +6,7 @@ $bg-secondary-color-first: #303e52;
 $bg-secondary-color-second: #252e3b;
 $bg-secondary-color-third: #293342;
 $bg-secondary-color-fourth: #283241;
+$bg-tertiary-color: #2a3443;
 
 // Text-Color
 $text-primary-color: #f8a74a;
@@ -36,6 +37,10 @@ $btn-hover-opacity: 0 !default;
   );
 }
 
+.bg-color-section-2 {
+  background-color: $bg-tertiary-color;
+}
+
 .text-primary-color {
   color: $text-primary-color;
 }
@@ -54,6 +59,38 @@ $btn-hover-opacity: 0 !default;
   border-bottom-style: solid;
   border-color: $text-primary-color;
   transition: 0.28s;
+}
+
+.v-btn-nav:active {
+  background-color: transparent;
+  border-width: 3px;
+  border-bottom-style: solid;
+  border-color: $text-primary-color;
+}
+
+.illustration {
+  pointer-events: none;
+}
+
+.custom-shape-divider-bottom {
+  margin-top: -7.5rem;
+  position: absolute;
+  bottom: 15;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 123px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+  fill: $bg-tertiary-color;
 }
 
 /* Use the variables display breakpoints*/
@@ -99,6 +136,10 @@ $btn-hover-opacity: 0 !default;
 
   .illustration {
     height: 400px;
+  }
+
+  .btn-icon {
+    margin-right: 1rem;
   }
 }
 
