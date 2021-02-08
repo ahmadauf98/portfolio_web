@@ -35,10 +35,12 @@
       ></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" color="#2A3443" absolute temporary>
+    <v-navigation-drawer v-model="drawer" color="#2A3443" app temporary>
       <v-list-item class="d-flex justify-center" height="70">
         <v-toolbar-title class="py-5">
-          <img class="logo-img" src="~/static/img/logo.svg" alt="..." />
+          <nuxt-link to="#home">
+            <img class="logo-img" src="~/static/img/logo.svg" alt="..." />
+          </nuxt-link>
         </v-toolbar-title>
       </v-list-item>
 
@@ -49,7 +51,7 @@
           class="d-block pa-0"
           v-for="(nav, index) in navigations"
           :key="index"
-          @click="nav.link"
+          :to="`#${nav.link}`"
           link
         >
           <v-list-item-content class="px-5">
@@ -80,7 +82,7 @@ export default {
       drawer: false,
       navigations: [
         { link: 'education', name: 'Education' },
-        { link: '', name: 'Skills' },
+        { link: 'skills', name: 'Skills' },
         { link: '', name: 'Project' },
         { link: '', name: 'Contact' },
       ],

@@ -41,6 +41,10 @@ $btn-hover-opacity: 0 !default;
   background-color: $bg-tertiary-color;
 }
 
+.bg-color-section-3 {
+  background-color: $bg-secondary-color-second;
+}
+
 .text-primary-color {
   color: $text-primary-color;
 }
@@ -90,6 +94,28 @@ $btn-hover-opacity: 0 !default;
 }
 
 .custom-shape-divider-bottom .shape-fill {
+  fill: $bg-tertiary-color;
+}
+
+.custom-shape-divider-top {
+  margin-top: -0.1rem;
+  position: absolute;
+  top: 2;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.custom-shape-divider-top .shape-fill {
   fill: $bg-tertiary-color;
 }
 
