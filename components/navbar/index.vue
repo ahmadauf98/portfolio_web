@@ -83,7 +83,7 @@ export default {
       navigations: [
         { link: 'education', name: 'Education' },
         { link: 'skills', name: 'Skills' },
-        { link: '', name: 'Project' },
+        { link: 'project', name: 'Project' },
         { link: '', name: 'Contact' },
       ],
     }

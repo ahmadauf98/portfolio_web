@@ -1,6 +1,13 @@
 <template>
   <div class="pa-2 mb-2 text-center">
-    <v-btn v-for="(icon, index) in icons" :key="index" class="btn-icon" icon>
+    <v-btn
+      v-for="(icon, index) in icons"
+      :key="index"
+      :href="icon.link"
+      target="_blank"
+      class="btn-icon"
+      icon
+    >
       <v-icon color="primary" :size="size">{{ icon.name }}</v-icon>
     </v-btn>
   </div>
@@ -11,10 +18,17 @@ export default {
   data() {
     return {
       icons: [
-        { link: '', name: 'mdi-facebook' },
-        { link: '', name: 'mdi-github' },
-        { link: '', name: 'mdi-linkedin' },
-        { link: '', name: 'mdi-instagram' },
+        {
+          link:
+            'https://mail.google.com/mail/?view=cm&fs=1&to=aufnasa.works@gmail.com&su=PARTNERSHIP+AND+COLLABORATION&body=WRITE+ALL+DETAILS+ABOUT+YOUR+PROJECTS',
+          name: 'mdi-gmail',
+        },
+        { link: 'https://github.com/ahmadauf98', name: 'mdi-github' },
+        {
+          link: 'https://www.linkedin.com/in/ahmad-auf-b9aa09185',
+          name: 'mdi-linkedin',
+        },
+        { link: 'https://www.instagram.com/aufnasa_/', name: 'mdi-instagram' },
       ],
     }
   },

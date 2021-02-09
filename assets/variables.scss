@@ -45,6 +45,10 @@ $btn-hover-opacity: 0 !default;
   background-color: $bg-secondary-color-second;
 }
 
+.bg-color-section-4 {
+  background-color: $bg-tertiary-color;
+}
+
 .text-primary-color {
   color: $text-primary-color;
 }
@@ -123,7 +127,7 @@ $btn-hover-opacity: 0 !default;
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .contain {
-    padding: 0 10px;
+    padding: 0 15px;
   }
 
   .logo-img {

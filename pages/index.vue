@@ -121,7 +121,7 @@
           <!-- Profile Data -->
           <v-col cols="12" sm="6">
             <h1
-              class="text-h4 font-weight-medium text-secondary-color mb-8 d-none d-md-flex"
+              class="text-h4 font-weight-medium text-secondary-color mb-12 d-none d-md-flex"
             >
               <v-icon class="mr-2" color="primary" size="35">mdi-bug</v-icon>
               Education Background
@@ -161,13 +161,13 @@
       <v-card
         :min-height="height"
         id="skills"
-        class="d-flex align-center"
+        class="d-flex align-center my-sm-15 my-md-15"
         color="transparent"
         flat
       >
         <v-row class="px-4 d-block align-center justify-center text-center">
           <h1
-            class="text-h5 text-sm-h4 font-weight-medium text-secondary-color mb-10 mb-sm-5 mb-md-15"
+            class="text-h5 text-sm-h4 font-weight-medium text-secondary-color mb-10 mb-md-15"
           >
             <v-icon color="primary" size="35">mdi-bug</v-icon>
             Technology Skills
@@ -250,6 +250,126 @@
               </v-row>
             </v-col>
           </div>
+        </v-row>
+      </v-card>
+
+      <div class="custom-shape-divider-bottom">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Fourth Section -->
+    <div class="bg-color-section-4 contain">
+      <v-card
+        :min-height="height"
+        id="project"
+        class="d-flex align-center py-15 pb-md-0"
+        color="transparent"
+        flat
+      >
+        <v-row
+          class="px-0 py-10 py-sm-15 my-sm-15 mt-md-15 pt-md-10 px-sm-4 d-block align-center justify-center text-center"
+        >
+          <h1
+            class="text-h5 text-sm-h4 font-weight-medium text-secondary-color mb-10 mb-md-15"
+          >
+            <v-icon color="primary" size="35">mdi-bug</v-icon>
+            Project Development
+          </h1>
+
+          <v-col
+            cols="10"
+            sm="6"
+            lg="4"
+            class="pa-0 px-sm-4 d-inline d-sm-inline-block justify-center mx-xl-n6"
+            v-for="(project, index) in projects"
+            :key="index"
+          >
+            <v-sheet
+              color="primary"
+              class="mx-auto mb-n9"
+              height="45"
+              rounded="lg"
+              :width="sheetWidth"
+            ></v-sheet>
+
+            <v-card
+              class="mx-auto card-project mb-10 mb-sm-12 mb-md-15 mb-lg-0"
+              color="#252e3b"
+              :max-width="cardWidth"
+              flat
+              rounded="lg"
+            >
+              <v-img :aspect-ratio="16 / 9" :src="project.image"> </v-img>
+
+              <div class="d-flex justify-start mx-4">
+                <v-chip
+                  v-for="(lang, index) in project.languages"
+                  :key="index"
+                  class="my-4 mr-1 mr-sm-2 px-2"
+                  color="primary"
+                  small
+                  outlined
+                  pill
+                >
+                  {{ lang }}
+                </v-chip>
+              </div>
+
+              <v-card-title
+                class="font-weight-medium text-secondary-color mt-n5 mb-n2"
+                >{{ project.title }}</v-card-title
+              >
+
+              <v-card-text class="d-flex mb-5 text-left">
+                <span
+                  class="text-subtitle-2 text-justify font-weight-regular text-secondary-color"
+                >
+                  {{ project.description }}
+                </span>
+              </v-card-text>
+
+              <v-row class="pb-4 d-flex justify-center">
+                <v-col cols="5" class="pa-0 pr-2">
+                  <v-btn
+                    :href="project.github"
+                    target="_blank"
+                    block
+                    color="secondary"
+                    large
+                    depressed
+                  >
+                    <v-icon class="mr-1" color="primary">mdi-github</v-icon>
+                    <span class="text-primary-color">Github</span>
+                  </v-btn>
+                </v-col>
+
+                <v-col cols="5" class="pa-0 pl-2">
+                  <v-btn
+                    :href="project.website"
+                    target="_blank"
+                    block
+                    color="secondary"
+                    large
+                    depressed
+                  >
+                    <v-icon class="mr-1" color="primary">mdi-web</v-icon>
+                    <span class="text-primary-color">Website</span>
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-col>
         </v-row>
       </v-card>
     </div>
@@ -367,6 +487,41 @@ export default {
           value: '87',
         },
       ],
+
+      projects: [
+        {
+          title: 'IPT CGPA Calculator',
+          languages: ['HTML', 'CSS', 'PHP', 'Bootstrap'],
+          description:
+            'This website is made for Students who studying at University in Malaysia to help them calculate their Cumulative Grade Points Average.',
+          github: 'https://github.com/ahmadauf98/iptcgpacalculator',
+          website: 'https://iptcgpacalculator.herokuapp.com/',
+          image:
+            'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2FSPORTS%20MANAGEMENT%20SYSTEM%20ILLUSTRATION.svg?alt=media&token=12a78a2c-cc5e-43f7-a933-f3a7466b0d47',
+        },
+
+        {
+          title: 'Sports Management System',
+          languages: ['Javascript', 'Nuxt', 'Vuetify', 'Firebase'],
+          description:
+            'The Sports Management System is a web application built using a vue framework to help organizers manage their sports tournaments or events.',
+          github: 'https://github.com/ahmadauf98/spotz',
+          website: 'https://spotz-v1.vercel.app',
+          image:
+            'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2FIPT%20CGPA%20CALCULATOR%20ILLUSTRATION.svg?alt=media&token=3386481d-13e1-4be5-bf57-3475512571b2',
+        },
+
+        {
+          title: 'Mini E-Commerce Platform',
+          languages: ['Javascript', 'Nuxt', 'Vuetify', 'Firebase'],
+          description:
+            "We've been doing maintenance and evolution to the original website. From the online shop platform, we've made it even bigger as the mini e-commerce platform.",
+          github: 'https://github.com/ahmadauf98/buefy-shop',
+          website: 'https://buefy-shop.vercel.app',
+          image:
+            'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2FMINI%20ECOMMERCE%20ILLUSTRATION.svg?alt=media&token=9d6cda43-0de2-4206-b932-2dc0b796112b',
+        },
+      ],
     }
   },
 
@@ -374,13 +529,13 @@ export default {
     height() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return 900
+          return 950
         case 'sm':
-          return 850
+          return 1050
         case 'md':
-          return 710
+          return 768
         case 'lg':
-          return 840
+          return 850
         case 'xl':
           return 877
       }
@@ -398,6 +553,36 @@ export default {
           return 80
         case 'xl':
           return 90
+      }
+    },
+
+    cardWidth() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 325
+        case 'sm':
+          return 360
+        case 'md':
+          return 400
+        case 'lg':
+          return 380
+        case 'xl':
+          return 400
+      }
+    },
+
+    sheetWidth() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 300
+        case 'sm':
+          return 300
+        case 'md':
+          return 370
+        case 'lg':
+          return 360
+        case 'xl':
+          return 375
       }
     },
   },
