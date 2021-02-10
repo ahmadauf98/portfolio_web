@@ -6,17 +6,70 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - portfolio_web',
-    title: 'portfolio_web',
+    titleTemplate: 'Portfolio - aufnasa',
+    title: 'Portfolio - Ahmad Auf Nasruddin',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Hello there 👋, checkout my portfolio now!',
+      },
+
+      // General
+      { property: 'og:site_name', content: 'Portfolio - aufnasa' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://aufnasa.vercel.app',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Portfolio - Ahmad Auf Nasruddin',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Hello there 👋, checkout my portfolio now!',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/meta-img.jpg',
+      },
+      { property: 'og:image:width', content: '740' },
+      { property: 'og:image:height', content: '300' },
+
+      // Twitter
+      { name: 'twitter:card', content: 'summary' },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://aufnasa.vercel.app',
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Portfolio - Ahmad Auf Nasruddin',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'Hello there 👋, checkout my portfolio now!',
+      },
+      {
+        hid: 'twitter:image0',
+        name: 'twitter:image0',
+        content: '/meta-img.jpg',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

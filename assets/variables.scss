@@ -15,6 +15,10 @@ $text-tertiary-color: #fafafbe1;
 $btn-hover-opacity: 0 !default;
 
 /* Use the variables */
+html {
+  scroll-behavior: smooth;
+}
+
 .bg-color {
   background-color: $bg-primary-color;
 }

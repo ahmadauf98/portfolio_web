@@ -84,7 +84,6 @@ export default {
         { link: 'education', name: 'Education' },
         { link: 'skills', name: 'Skills' },
         { link: 'project', name: 'Project' },
-        { link: '', name: 'Contact' },
       ],
     }
   },

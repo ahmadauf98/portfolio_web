@@ -38,6 +38,8 @@
             <v-btn
               class="text-body-1 text-capitalize"
               color="#f8a74a"
+              href="https://www.linkedin.com/in/ahmad-auf-b9aa09185"
+              target="_blank"
               outlined
               x-large
               >Hire Me</v-btn
