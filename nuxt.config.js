@@ -42,7 +42,7 @@ export default {
         hid: 'og:image',
         property: 'og:image',
         content:
-          'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2Fmeta-img.jpg?alt=media&token=8bd58dda-647f-4373-b329-e9384829898e',
+          'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2Fmeta-img.jpg?alt=media&token=ca293d27-e495-476b-8b13-9eae33a5807c',
       },
       { property: 'og:image:width', content: '740' },
       { property: 'og:image:height', content: '300' },
@@ -73,7 +73,7 @@ export default {
         hid: 'twitter:image',
         name: 'twitter:image',
         content:
-          'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2Fmeta-img.jpg?alt=media&token=8bd58dda-647f-4373-b329-e9384829898e',
+          'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2Fmeta-img.jpg?alt=media&token=ca293d27-e495-476b-8b13-9eae33a5807c',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
