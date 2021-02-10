@@ -26,7 +26,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://aufnasa.vercel.app',
+        content: 'https://portfolio.aufnasa.com',
       },
       {
         hid: 'og:title',
@@ -57,7 +57,7 @@ export default {
       {
         hid: 'twitter:url',
         name: 'twitter:url',
-        content: 'https://aufnasa.vercel.app',
+        content: 'https://portfolio.aufnasa.com',
       },
       {
         hid: 'twitter:title',
