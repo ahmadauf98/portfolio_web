@@ -20,7 +20,7 @@ export default {
         content: 'Hello there 👋, checkout my portfolio now!',
       },
 
-      // General
+      // Open Graph
       { property: 'og:site_name', content: 'Portfolio - aufnasa' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -48,7 +48,12 @@ export default {
       { property: 'og:image:height', content: '300' },
 
       // Twitter
-      { name: 'twitter:card', content: 'summary' },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@aufnasa_' },
       {
         hid: 'twitter:url',
         name: 'twitter:url',
@@ -65,8 +70,8 @@ export default {
         content: 'Hello there 👋, checkout my portfolio now!',
       },
       {
-        hid: 'twitter:image0',
-        name: 'twitter:image0',
+        hid: 'twitter:image',
+        name: 'twitter:image',
         content:
           'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2Fmeta-img.jpg?alt=media&token=a0a56076-2eab-418b-a10a-959f5c021347',
       },
