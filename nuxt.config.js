@@ -41,7 +41,8 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/meta-img.jpg',
+        content:
+          'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2Fmeta-img.jpg?alt=media&token=a0a56076-2eab-418b-a10a-959f5c021347',
       },
       { property: 'og:image:width', content: '740' },
       { property: 'og:image:height', content: '300' },
@@ -66,7 +67,8 @@ export default {
       {
         hid: 'twitter:image0',
         name: 'twitter:image0',
-        content: '/meta-img.jpg',
+        content:
+          'https://firebasestorage.googleapis.com/v0/b/spotz-19a2a.appspot.com/o/Personal%2Fmeta-img.jpg?alt=media&token=a0a56076-2eab-418b-a10a-959f5c021347',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
