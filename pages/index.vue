@@ -470,10 +470,10 @@ export default {
           value: '90',
         },
         {
-          logo: 'https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg',
-          link: 'https://bootstrap-vue.org/',
-          color: '#563d7c',
-          value: '80',
+          logo: 'https://cdn.worldvectorlogo.com/logos/tailwindcss.svg',
+          link: 'https://tailwindcss.com/',
+          color: '#06b6d4',
+          value: '85',
         },
         {
           logo: 'https://cdn.worldvectorlogo.com/logos/git-icon.svg',
